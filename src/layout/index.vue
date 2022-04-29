@@ -1,9 +1,9 @@
 <template>
   <div class="layout">
-    <Menu />
+    <Menu name="wly"> </Menu>
     <div class="layout-right">
-      <Header />
-      <Content />
+      <Header></Header>
+      <Content></Content>
     </div>
   </div>
 </template>
