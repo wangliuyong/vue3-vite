@@ -19,10 +19,6 @@ const stop = watchEffect((oninvalidate) => {
     console.log('watch被触发了');
   }
 })
-
-
-
-
 </script>
 
 <template>
@@ -30,6 +26,4 @@ const stop = watchEffect((oninvalidate) => {
 
 </template>
 
-<style>
 
-</style>

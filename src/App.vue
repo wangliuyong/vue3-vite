@@ -30,6 +30,6 @@ const stop = watchEffect((oninvalidate) => {
 
 </template>
 
-<style>
+<style lang="less">
 
 </style>
