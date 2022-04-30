@@ -11,6 +11,7 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@types/node": "^17.0.30",
     "@vitejs/plugin-vue": "^2.3.1",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
