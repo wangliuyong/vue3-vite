@@ -10,12 +10,18 @@
       </button>
     </div>
     <component :is="currentComponent.comName"></component>
+    <Dialog>
+      <template #header="data"> header{{data}} </template>
+      <template #default="data"> header{{data}} </template>
+      <template #footer="data"> footer{{data}} </template>
+    </Dialog>
   </div>
 </template>
 <script setup lang="ts">
 import { Tab, Com } from "../../models/menu";
 import A from "../../components/A.vue";
 import B from "../../components/B.vue";
+import Dialog from "../../components/Dialog/index.vue";
 
 const data = reactive<Tab[]>([
   { name: "tabA", comName: markRaw(A) }, // 标记不做代理，无响应式
