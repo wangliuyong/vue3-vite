@@ -9,23 +9,22 @@
         {{ item.name }}
       </button>
     </div>
-    <component :is="currentComponent.comName"></component>
+    <transition name="fade" enter-active-class="animate__animated animate__rubberBand" leave-active-class="animate__animated animate__heartBeat">
+      <component :is="currentComponent.comName"></component>
+    </transition>
+
     <Dialog>
-      
-      <template #[slotName]="data"> slotName{{data}} </template>
+      <template #[slotName]="data"> slotName{{ data }} </template>
       <!-- <template #header="data"> header{{data}} </template>
       <template #default="data"> header{{data}} </template>
       <template #footer="data"> footer{{data}} </template> -->
     </Dialog>
     <Suspense>
-      <template #fallback>
-        loading.....
-      </template>
+      <template #fallback> loading..... </template>
       <template #default>
-       <AsyncComponent></AsyncComponent>
+        <AsyncComponent></AsyncComponent>
       </template>
     </Suspense>
-    
   </div>
 </template>
 
@@ -37,7 +36,9 @@ import Dialog from "@/components/Dialog/index.vue";
 // import AsyncComponent from "@/components/AsyncComponent.vue";
 
 // 异步组件引入方式
-const AsyncComponent = defineAsyncComponent(() => import('@/components/AsyncComponent.vue'))
+const AsyncComponent = defineAsyncComponent(
+  () => import("@/components/AsyncComponent.vue")
+);
 
 const data = reactive<Tab[]>([
   { name: "header", comName: markRaw(A) }, // 标记不做代理，无响应式
@@ -59,5 +60,34 @@ const changeCom = (item: Tab) => {
 .content {
   flex: 1;
   margin: 20px;
+}
+
+// transition 动画样式
+.fade-enter-from {
+  width: 0;
+  height: 0;
+}
+
+.fade-enter-active {
+  transition: all 1.5s ease;
+}
+
+.fade-enter-to {
+  height: 50px;
+  width: 50vw;
+}
+
+.fade-leave-from {
+  width: 0;
+  height: 0;
+}
+
+.fade-leave-active {
+  transition: all 1.5s ease;
+}
+
+.fade-leave-to {
+  height: 50px;
+  width: 50vw;
 }
 </style>
