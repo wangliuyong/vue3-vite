@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <TransitionX></TransitionX>
     <div class="content-btn-wrap">
       <button
         :key="index"
@@ -9,9 +10,7 @@
         {{ item.name }}
       </button>
     </div>
-    <transition name="fade" enter-active-class="animate__animated animate__rubberBand" leave-active-class="animate__animated animate__heartBeat">
-      <component :is="currentComponent.comName"></component>
-    </transition>
+     <component :is="currentComponent.comName"></component>
 
     <Dialog>
       <template #[slotName]="data"> slotName{{ data }} </template>
@@ -33,6 +32,7 @@ import { Tab, Com } from "../../models/menu";
 import A from "@/components/A.vue";
 import B from "@/components/B.vue";
 import Dialog from "@/components/Dialog/index.vue";
+import TransitionX from "@/components/TransitionX.vue";
 // import AsyncComponent from "@/components/AsyncComponent.vue";
 
 // 异步组件引入方式
@@ -62,32 +62,5 @@ const changeCom = (item: Tab) => {
   margin: 20px;
 }
 
-// transition 动画样式
-.fade-enter-from {
-  width: 0;
-  height: 0;
-}
 
-.fade-enter-active {
-  transition: all 1.5s ease;
-}
-
-.fade-enter-to {
-  height: 50px;
-  width: 50vw;
-}
-
-.fade-leave-from {
-  width: 0;
-  height: 0;
-}
-
-.fade-leave-active {
-  transition: all 1.5s ease;
-}
-
-.fade-leave-to {
-  height: 50px;
-  width: 50vw;
-}
 </style>
