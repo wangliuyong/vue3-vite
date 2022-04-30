@@ -6,7 +6,8 @@
     "allowSyntheticDefaultImports": true
   },
   "paths": {
-    "@/*": ["src/*"]
+    "@/*": ["src/*"],
+    "@models": ["src/models"],
   },
   "include": ["vite.config.ts"]
 }

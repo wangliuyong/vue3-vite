@@ -1,1 +1,1 @@
-declare '@/models/menu'
+// declare module '@models/menu' 
