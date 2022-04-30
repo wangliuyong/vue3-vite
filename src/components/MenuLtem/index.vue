@@ -20,5 +20,6 @@ defineProps<{ item: Menu }>();
 <style scoped lang="less">
 .menu-item{
   margin-left: 20px;
+  
 }
 </style>

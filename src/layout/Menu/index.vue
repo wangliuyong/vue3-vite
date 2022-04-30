@@ -12,7 +12,7 @@ type Props = {
 };
 
 const menuLitem:Menu[] = [
-  {
+  { 
     name: "1-1",
     children: [{ name: "1-1-1" }],
   },
@@ -43,5 +43,6 @@ defineExpose({ props });
 .menu {
   width: 240px;
   border-right: 1px solid #ccc;
+  padding: 16px;
 }
 </style>
