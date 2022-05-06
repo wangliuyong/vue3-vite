@@ -1,4 +1,5 @@
 <template>
+
   <div class="content">
     <TransitionX></TransitionX>
     <div class="content-btn-wrap">
@@ -10,7 +11,7 @@
         {{ item.name }}
       </button>
     </div>
-     <component :is="currentComponent.comName"></component>
+    <component :is="currentComponent.comName"></component>
 
     <Dialog>
       <template #[slotName]="data"> slotName{{ data }} </template>
@@ -33,6 +34,7 @@ import A from "@/components/A.vue";
 import B from "@/components/B.vue";
 import Dialog from "@/components/Dialog/index.vue";
 import TransitionX from "@/components/TransitionX.vue";
+import Login from "@/components/Login.vue";
 // import AsyncComponent from "@/components/AsyncComponent.vue";
 
 // 异步组件引入方式
@@ -60,7 +62,6 @@ const changeCom = (item: Tab) => {
 .content {
   flex: 1;
   margin: 20px;
+  overflow: auto;
 }
-
-
 </style>

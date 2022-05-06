@@ -28,7 +28,7 @@
 
     <div>
       <button @click="random">random</button>
-      <div class="wraps">
+      <div class="wraps" @click="random">
          <transition-group
            move-class="move"
           >
