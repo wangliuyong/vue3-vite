@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { Tab, Com } from "../../models/menu";
+import { Tab, Com } from "@/models/menu";
 import A from "@/components/A.vue";
 import B from "@/components/B.vue";
 import Dialog from "@/components/Dialog/index.vue";

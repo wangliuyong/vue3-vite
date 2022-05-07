@@ -9,7 +9,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useUser } from "../../hooks/useUser";
+import { useUser } from "@/hooks/useUser";
 
 const { login, logout, isLogin } = useUser();
 </script>

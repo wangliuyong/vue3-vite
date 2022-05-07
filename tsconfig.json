@@ -15,12 +15,14 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true, 
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@models": ["src/models"],
+    },
   },
-  "paths": {
-    "@/*": ["src/*"],
-    "@models": ["src/models"],
-  },
+  
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx","src/**/*.jsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -4,8 +4,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { Menu } from "../../models/menu";
-import MenuItem from "../../components/MenuLtem/index.vue";
+import { Menu } from "@/models/menu";
+import MenuItem from "@/components/MenuLtem/index.vue";
 
 type Props = {
   name: string;
