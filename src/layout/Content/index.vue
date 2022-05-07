@@ -19,6 +19,8 @@
       <template #default="data"> header{{data}} </template>
       <template #footer="data"> footer{{data}} </template> -->
     </Dialog>
+    
+    <!-- 异步组件 -->
     <Suspense>
       <template #fallback> loading..... </template>
       <template #default>
@@ -41,7 +43,7 @@ import Login from "@/components/Login.vue";
 const AsyncComponent = defineAsyncComponent(
   () => import("@/components/AsyncComponent.vue")
 );
-
+// 动态组件
 const data = reactive<Tab[]>([
   { name: "header", comName: markRaw(A) }, // 标记不做代理，无响应式
   { name: "footer", comName: markRaw(B) }, // 标记不做代理，无响应式
