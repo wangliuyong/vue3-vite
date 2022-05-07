@@ -9,8 +9,9 @@ declare module "vue" {
   }
 }
 
-export function setupStore(app: App) {
+export function setupBus(app: App) {
   // app.use()
   const Mitt = mitt();
+
   app.config.globalProperties.$bus = Mitt;
 }
