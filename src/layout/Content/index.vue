@@ -1,6 +1,7 @@
 <template>
 
   <div class="content">
+    <!-- transtion -->
     <TransitionX></TransitionX>
     <div class="content-btn-wrap">
       <button
@@ -11,8 +12,9 @@
         {{ item.name }}
       </button>
     </div>
+    <!-- 动态组件 -->
     <component :is="currentComponent.comName"></component>
-
+    <!-- 插槽 -->
     <Dialog>
       <template #[slotName]="data"> slotName{{ data }} </template>
       <!-- <template #header="data"> header{{data}} </template>
