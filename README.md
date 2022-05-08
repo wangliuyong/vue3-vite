@@ -13,3 +13,14 @@
 * 三种状态 enter(进入) leave(离开) appear(第一次初始化)
 
 ## transition-group（列表过度）
+
+
+## v-model
+
+实际上只是语法糖
+
+`<div v-model="demo" type="text" />`
+
+等同于:
+
+`<div @update:modelValue="(value) => demo = value" type="text" :modelValue="demo"/>`

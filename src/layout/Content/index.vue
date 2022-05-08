@@ -30,6 +30,7 @@
       </template>
     </Suspense>
   </div>
+  <demo />
 </template>
 
 <script setup lang="ts">
@@ -40,6 +41,7 @@ import Dialog from "@/components/Dialog/index.vue";
 import TransitionX from "@/components/TransitionX.vue";
 import Login from "@/components/Login.vue";
 // import AsyncComponent from "@/components/AsyncComponent.vue";
+import demo from "@/components/Mdel";
 
 // 异步组件引入方式
 const AsyncComponent = defineAsyncComponent(
