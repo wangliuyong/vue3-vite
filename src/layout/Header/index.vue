@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+    <!-- {{$filters.format('333')}} -->
     <span>登录实现</span>
     <span>登录状态:{{ isLogin ? "已登陆" : "未登录" }}</span>
     <span>
@@ -9,7 +10,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useUser } from "@/hooks/useUser";
+import useUser from "@/hooks/useUser";
 
 const { login, logout, isLogin } = useUser();
 </script>
