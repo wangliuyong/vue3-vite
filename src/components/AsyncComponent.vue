@@ -7,7 +7,7 @@ import {axios} from '../untils/server'
 
 const nameList = await axios('../../public/data.json')
 
-console.log(nameList);
+// console.log(nameList);
 
 
 </script>

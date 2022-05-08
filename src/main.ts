@@ -1,16 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
-import {setupBus} from '@/plugins/eventBus'
-import {setupGlobalProperties} from '@/plugins/addGlobalProperties'
+import { setupBus } from "@/plugins/eventBus";
+import { setupGlobalProperties } from "@/plugins/addGlobalProperties";
+import { setupLoading } from "@/plugins/loading";
 
-import '@/style/index.less'
-import 'animate.css';
+import "@/style/index.less";
+import "animate.css";
 
+const app = createApp(App);
 
-const app = createApp(App)
+app.use(setupBus);
+app.use(setupGlobalProperties);
+app.use(setupLoading);
 
-app.use(setupBus)
-app.use(setupGlobalProperties)
-
-app.mount('#app')
+app.mount("#app");

@@ -47,7 +47,6 @@ const list = reactive<number[]>([1, 2, 3, 4, 5]);
 
 const lists = ref(Array.apply(null,({length:81} as any)).map((item,index) => index))
 
-console.log(lists.value);
 
 
 const add = () => {

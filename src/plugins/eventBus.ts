@@ -10,6 +10,8 @@ declare module "vue" {
 }
 
 export function setupBus(app: App) {
+  // console.log(333,app);
+  
   // app.use()
   const Mitt = mitt();
 

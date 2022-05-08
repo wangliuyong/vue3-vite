@@ -11,7 +11,7 @@ const stop = watchEffect((oninvalidate) => {
 
   const body:HTMLElement | null = document.querySelector('body')
 
-  console.log(body);
+  // console.log(body);
 },{
    // post组件渲染后执行 pre更新前，sync同步执行
   flush:'post' ,
