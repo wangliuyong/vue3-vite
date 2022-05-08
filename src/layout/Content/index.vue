@@ -1,6 +1,7 @@
 <template>
 
   <div class="content">
+    {{count}}
     <!-- transtion -->
     <TransitionX></TransitionX>
     <div class="content-btn-wrap">
@@ -42,6 +43,23 @@ import TransitionX from "@/components/TransitionX.vue";
 import Login from "@/components/Login.vue";
 // import AsyncComponent from "@/components/AsyncComponent.vue";
 import demo from "@/components/Mdel";
+
+
+import { storeToRefs } from "pinia";
+
+import {useStore} from '@/store'
+
+const store = useStore()
+
+// 监听state的变化
+store.$subscribe((args,state) => {
+
+})
+
+// 解构会丧失响应式，需使用storeToRefs
+const {count} = storeToRefs(store)
+
+store.setCount(10000)
 
 // 异步组件引入方式
 const AsyncComponent = defineAsyncComponent(
