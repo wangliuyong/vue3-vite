@@ -13,7 +13,7 @@ const customOn = (eventName: string, callback: Function): void => {
   emitter.on(eventName, (data) => callback(data))
 }
 
-export const useEventbus = () => {
+export default () => {
   onUnmounted(() => {
     emitter.all.clear()
   })

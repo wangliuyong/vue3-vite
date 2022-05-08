@@ -10,7 +10,7 @@ const user = useStorage('USER', null,localStorage,{
 })
 
 
-export const useUser = () => {
+export default () => {
 
   const userModel = ref({
     name:'wangliuyong',
